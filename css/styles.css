@@ -246,7 +246,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 fill: var(--social-color);
                 width: 106px;
                 height: 60px;
-                background-position: center;}
+                background-position: center;
+                margin-top: 16px;}
     .icon-client > a{display: block;}
     .client-logo > a{padding: 16px 32px;}
     .icon-client:hover, .icon-client:focus{fill: var(--accent-background-color);
