@@ -70,17 +70,15 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
     /* header-contacts */
     .contacts{  display: flex;}
     .contact:not(:last-child){margin-right: 50px;}
-    .contact > a{display: block;
+    .contact > a{display: inline-flex;
+                align-items: center;
                 padding: 32px 0px;
         
                 color: var(--primary-text-color);
                 text-decoration: none;}
     .contact > a:hover, .contact > a:focus{color: var(--accent-background-color);}
-    .icon-header{content: "";
-                fill:var(--primary-text-color);
-                margin-right: 10px;
-                margin-top: 2px;}
-    .icon-header:hover, .icon-header:focus{fill: var(--accent-background-color);}
+    .icon-header{fill: currentColor;
+                margin-right: 10px;}
     .icon-header.mail{width: 16px;
                     height: 12px;}
     .icon-header.phone{width: 10px;
@@ -148,13 +146,16 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                     margin-bottom: 0px;
                     gap: 30px;}
     .features-item{width: 270px;}
-        .icon-feature-button{width: 270px;
+    .icon-feature-container{width: 270px;
                         height: 120px;
                         border: transparent;
-                        margin-bottom: 30px;}
+                        border-radius: 4px;
+                        margin-bottom: 30px;
+                background-color: var(--additional-background-color);}
 
     .icon-feature{width: 70px;
-                height: 70px;}
+                height: 70px;
+                margin: 25px 100px;}
 
 
     /* .features-item::before{display: block;
@@ -203,7 +204,9 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                     line-height: 1.19;       
                     text-align: center;
                     letter-spacing: 0.03em;}
-    .card{background-color: var(--primary-background-color);}
+    .card{background-color: var(--primary-background-color);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;}
     .card-description{padding: 30px 0px;}
     .team{background-color: var(--additional-background-color);
                     font-weight: 400;
@@ -212,21 +215,24 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                     text-align: center;
                     letter-spacing: 0.03em;}
     .social-cards{display: flex;
-                    margin: 16px 30px 0px 30px;}
+                justify-content: center;
+                    margin-top: 16px;}
     .social-card>a {
             display: block;
             text-align: center;
             width: 44px;
             height: 44px;
             padding: 12px;
-            border-radius: 50%;}
+            border-radius: 50%;
+        color:var(--social-color);}
     .social-cards>.social-card:not(:last-child){margin-right: 10px;}
     .social-card>a:hover,.social-card>a:focus {background-color: var(--accent-background-color);
+        color: var(--primary-background-color);
            
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
     
     .icon-card {content: "";
-            fill: var(--social-color);
+            fill: currentColor;
             width: 20px;
             height: 20px;
             background-position: center;
@@ -239,20 +245,19 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
     .our-clients{display: flex;
                 gap: 30px;}
     .client-logo{width: 170px;
-                height: 92px;
-                          
-            outline: solid 1px var(--social-color);}
+                height: 92px;}
+     .client-logo>a {
+             display: block;
+             padding: 16px 32px;
+             color: var(--social-color);
+                border: solid 1px var(--social-color);
+                border-radius: 4px;}
     .icon-client{content: "";
-                fill: var(--social-color);
+                fill: currentColor;
                 width: 106px;
                 height: 60px;
-                background-position: center;
-                margin-top: 16px;}
-    .icon-client > a{display: block;}
-    .client-logo > a{padding: 16px 32px;}
-    .icon-client:hover, .icon-client:focus{fill: var(--accent-background-color);
-                border: var(--accent-background-color);}
-    .client-logo:hover, .client-logo:focus{fill: var(--accent-background-color);
+                background-position: center;}
+    .client-logo>a:hover, .client-logo>a:focus{color: var(--accent-background-color);
                 outline: solid 1px var(--accent-background-color);}
 
     /* footer */
@@ -290,11 +295,11 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
     .footer-e-mail > a:hover, .footer-e-mail > a:focus{color: var(--accent-background-color);}    
     .footer-phone-number > a:hover, .footer-phone-number > a:focus{color: var(--accent-background-color);}
     .footer{background-color: var(--hero-background-color);}
-    .footer > div{display: flex;}
+    .footer > div{display: flex;
+                align-items: baseline;}
     .social{display: flex;
             }
-    .footer-social{margin-top: 10px;
-                margin-left: 70px;        
+    .footer-social{margin-left: 70px;        
     
                 font-family: 'Roboto';
                 font-style: normal;
@@ -304,7 +309,7 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 letter-spacing: 0.03em;
                 text-transform: uppercase;
                 color:var(--primary-background-color)}
-    .footer-social > h2{margin-bottom: 20px;
+    .footer-social > p{margin-bottom: 20px;
                 font-size: 14px;}
     .social-item > a{display: block;
                 text-align: center;
@@ -368,6 +373,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
     .project-item{
         border: solid 1px #EEEEEE;}
     .project-item:not(:nth-child(n+7)){margin-bottom: 30px;}
+    .project-item:hover{border: 1px solid #EEEEEE;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
     
 
     /* шрифти:
