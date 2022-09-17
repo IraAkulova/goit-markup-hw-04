@@ -146,7 +146,11 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                     margin-bottom: 0px;
                     gap: 30px;}
     .features-item{width: 270px;}
-    .icon-feature-container{width: 270px;
+    .icon-feature-container{display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        
+                        width: 270px;
                         height: 120px;
                         border: transparent;
                         border-radius: 4px;
@@ -154,23 +158,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 background-color: var(--additional-background-color);}
 
     .icon-feature{width: 70px;
-                height: 70px;
-                margin: 25px 100px;}
+                height: 70px;}
 
-
-    /* .features-item::before{display: block;
-        content: "";
-        height: 120px;
-        background-size: 70px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: var(--additional-background-color);
-        margin-bottom: 30px;}
-    .antenna::before{background-image: url(../images/antenna.svg);}
-    .clock::before{background-image: url(../images/clock.svg);}
-    .diagram::before{background-image: url(../images/diagram.svg);}
-    .astronaut::before{background-image: url(../images/astronaut.svg);} */
-    /* .features-item:not(:last-child){margin-right: 30px;} */
     .features{margin-bottom: 10px;
         
                     color: var(--title-text-color);
@@ -258,7 +247,7 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 height: 60px;
                 background-position: center;}
     .client-logo>a:hover, .client-logo>a:focus{color: var(--accent-background-color);
-                outline: solid 1px var(--accent-background-color);}
+                border: solid 1px var(--accent-background-color);}
 
     /* footer */
     .footer{padding: 60px;}
@@ -339,6 +328,7 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 justify-content: space-between;}
     .button{display: block;
         padding: 6px 22px;
+        border-radius: 4px;
         
         color: var(--title-text-color);
             background-color:var(--additional-background-color) ;
@@ -374,7 +364,7 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
     .project-item{
         border: solid 1px #EEEEEE;}
     .project-item:not(:nth-child(n+7)){margin-bottom: 30px;}
-    .project-item>a:hover, .project-item>a:focus{border: 1px solid #EEEEEE;
+    .project-item>a:hover, .project-item>a:focus{
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
     
 
