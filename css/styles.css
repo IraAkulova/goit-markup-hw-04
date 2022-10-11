@@ -66,6 +66,13 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
     .header-item:not(:last-child){margin-right: 50px;}
     .header-item > a:hover, .header-item > a:focus{color: var(--accent-background-color);}
     .header-list .current{color: var(--accent-background-color);}
+    /* .header-item::before{
+        content: "";
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: var(--accent-background-color);
+    } */
 
     /* header-contacts */
     .contacts{  display: flex;}
@@ -216,10 +223,7 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
         color:var(--social-color);}
     .social-cards>.social-card:not(:last-child){margin-right: 10px;}
     .social-card>a:hover,.social-card>a:focus {background-color: var(--accent-background-color);
-        color: var(--primary-background-color);
-           
-            /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
-        }
+        color: var(--primary-background-color);}
     
     .icon-card {content: "";
             fill: currentColor;
